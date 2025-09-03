@@ -2,7 +2,7 @@ import React, { useContext,useEffect } from 'react';
 import { useNavigate, useRoutes } from 'react-router-dom';
 import { AuthContext } from './authContext';
 import App from "./App"
-import Signup from './signup';
+import Signup from "./signup"
 import Login from "./Login"
 
 
