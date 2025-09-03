@@ -13,11 +13,16 @@ const PORT = process.env.PORT || 8000;
 app.use(cors());
 app.use(express.json());
 
-// Routes
+// ✅ Health route first
+app.get("/api", (req, res) => {
+  res.send("✅ API is running!");
+});
+
+// ✅ Routers after
 app.use("/api", router);
 app.use("/api", userRouter);
 
-// MongoDB connection
+// ✅ MongoDB connection
 async function main() {
   try {
     await mongoose.connect(process.env.MONGO_URL, {
@@ -32,11 +37,7 @@ async function main() {
 }
 main();
 
-app.get("/api", (req, res) => {
-  res.send("✅ API is running!");
-});
-
-// Server
+// ✅ Server
 app.listen(PORT, () => {
   console.log(`🚀 App is listening on port ${PORT}`);
 });
