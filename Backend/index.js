@@ -36,3 +36,7 @@ main();
 app.listen(PORT, () => {
   console.log(`🚀 App is listening on port ${PORT}`);
 });
+
+app.get("/api", (req, res) => {
+  res.send("✅ API is running!");
+});
