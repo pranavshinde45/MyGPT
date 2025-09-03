@@ -34,7 +34,7 @@ function Login() {
     event.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:8080/api/login", {
+      const res = await axios.post("https://mygpt-vr7p.onrender.com/api/login", {
         username,
         password,
       });
