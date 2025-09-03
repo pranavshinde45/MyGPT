@@ -6,6 +6,7 @@ import Login from "./Login.jsx";
 import Signup from './signup.jsx';
 
 
+
 function Routes() {
     const {currUser,setCurrUser}=useContext(AuthContext);
     const navigate=useNavigate();
